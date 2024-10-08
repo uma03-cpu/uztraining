@@ -18,11 +18,11 @@ Way to create a delta table
 
 -- COMMAND ----------
 
-create schema datamaster.hexaware;
+create schema datamaster.uz;
 
 -- COMMAND ----------
 
-create table datamaster.hexaware.demo(id int, name string)
+create table datamaster.uz.demo(id int, name string)
 
 -- COMMAND ----------
 
@@ -30,19 +30,19 @@ create table datamaster.hexaware.demo(id int, name string)
 
 -- COMMAND ----------
 
-create table datamaster.hexaware.demo2(id int, name string, age int) LOCATION 'abfss://raw@datamasterdatabricks.dfs.core.windows.net/delta/demo2'
+create table datamaster.uz.demo2(id int, name string, age int) LOCATION 'abfss://raw@datamasterdatabricks.dfs.core.windows.net/delta/demo2'
 
 -- COMMAND ----------
 
-insert into datamaster.hexaware.demo2 values(111,'naval', 32)
+insert into datamaster.uz.demo2 values(111,'naval', 32)
 
 -- COMMAND ----------
 
-Insert into datamaster.hexaware.demo values(1,'naval')
+Insert into datamaster.uz.demo values(1,'naval')
 
 -- COMMAND ----------
 
-drop table datamaster.hexaware.demo2
+drop table datamaster.uz.demo2
 
 -- COMMAND ----------
 
@@ -50,11 +50,11 @@ select * from delta.`abfss://raw@datamasterdatabricks.dfs.core.windows.net/delta
 
 -- COMMAND ----------
 
-select * from datamaster.hexaware.demo
+select * from datamaster.uz.demo
 
 -- COMMAND ----------
 
-describe extended datamaster.hexaware.demo
+describe extended datamaster.uz.demo
 
 -- COMMAND ----------
 
